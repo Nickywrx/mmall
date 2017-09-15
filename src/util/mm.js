@@ -30,7 +30,7 @@ var _mm = {
 	},
 	// 统一登陆处理
 	doLogin : function(){
-		window.location.href = './login/html?redirect=' + encodeURIComponent(window.location.href);
+		window.location.href = './user-login.html?redirect=' + encodeURIComponent(window.location.href);
 	},
 	// 获取服务器地址
 	getServerUrl : function(path){
