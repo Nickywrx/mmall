@@ -68,7 +68,7 @@ var _mm = {
 		};
 		// 邮箱验证
 		if('email' === type){
-			return /^[A-Za-zd]+([-_.][A-Za-zd]+)*@([A-Za-zd]+[-.])+[A-Za-zd]{2,5}$/.test(value);
+			return /^(\w)+(\.\w+)*@(\w)+((\.\w{2,3}){1,3})$/.test(value);
 		};
 	},
 	// 回到首页
