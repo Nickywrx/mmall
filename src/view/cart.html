@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<%= require('html-loader!./layout/head-common.html')%>
+		<title><%= htmlWebpackPlugin.options.title%> - happymmall电商平台</title>
+	</head>
+<body>
+	<%= require('html-loader!./layout/nav.html')%>
+	<%= require('html-loader!./layout/header.html')%>
+	<!-- 中间内容 -->
+	<div class="crumb">
+		<div class="w">
+			<div class="crumb-con">
+				<a href="./index.html" class="link">MMall</a>
+				<span>></span>
+				<span class="link-text"><%= htmlWebpackPlugin.options.title%></span>
+			</div>
+		</div>
+	</div>
+	<!-- 中间内容 -->
+	<div class="page-wrap w">
+		<div class="cart-header">
+			<table class="cart-table">
+				<th class="cart-cell cell-check">
+					<label class="cart-cell">
+						<input type="checkbox" class="cart-select-all" />
+						<span>全选</span>
+					</label>
+				</th>
+				<th class="cart-cell cell-info">商品信息</th>
+				<th class="cart-cell cell-price">单价</th>
+				<th class="cart-cell cell-count">数量</th>
+				<th class="cart-cell cell-total">合计</th>
+				<th class="cart-cell cell-opera">操作</th>
+			</table>
+		</div>
+		<div class="cart-list">
+			<table class="cart-table">
+				<tr class="cart-cell">
+					<label class="cart-cell cell-check">
+						<input type="checkbox" class="cart-select" />
+					</label>
+				</tr>
+				<tr class="cart-cell cell-info">
+					<img class="p-img" src="" alt="">
+					<a href="./detail.html?productId=" class="link">xxxxxx</a>
+				</tr>
+				<tr class="cart-cell cell-price">￥111</tr>
+				<tr class="cart-cell cell-count">222</tr>
+				<tr class="cart-cell cell-total">￥222</tr>
+				<tr class="cart-cell cell-opera">
+					<span class="link cart-delete"></span>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<%= require('html-loader!./layout/footer.html')%>
+</body>
+</html>
