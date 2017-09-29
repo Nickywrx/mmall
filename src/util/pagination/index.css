@@ -1,0 +1,35 @@
+/*
+* @Author: Nicky_wu
+* @Date:   2017-09-29 11:13:29
+* @Last Modified by:   Nicky_wu
+* @Last Modified time: 2017-09-29 13:43:07
+*/
+.pg-content{
+	text-align: center;
+	color: #333;
+}
+.pg-content .pg-item{
+	display: inline-block;
+	height: 36px;
+	line-height: 36px;
+	padding: 0 15px;
+	margin: 0 2px;
+	border: 1px solid #ccc;
+	background-color: #eee;
+	cursor: pointer;
+}
+.pg-content .pg-item.disabled{
+	color: #ccc;
+	background-color: none;
+	cursor: auto;
+}
+.pg-content .pg-item.active{
+	border: 1px solid #f6f6f6;
+	background-color: none;
+	cursor: auto;
+}
+.pg-content .pg-total{
+	margin-left: 10px;
+	background-color: none;
+	cursor: auto;
+}

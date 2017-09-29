@@ -1,8 +1,8 @@
 /*
 * @Author: mmall
 * @Date:   2017-05-27 18:04:22
-* @Last Modified by:   Rosen
-* @Last Modified time: 2017-05-29 16:44:22
+* @Last Modified by:   Nicky_wu
+* @Last Modified time: 2017-09-29 15:02:42
 */
 /* 排序按钮 */
 .sort-con{
@@ -77,4 +77,14 @@
     margin-bottom: 10px;
     color: #666;
     text-decoration: none;
+}
+/* 错误信息 */
+.err-tip{
+    height: 60px;
+    line-height: 60px;
+    color: #f60;
+    font-weight: bold;
+    text-align: center;
+    background-color: #eee;
+    font-size: 16px;
 }
