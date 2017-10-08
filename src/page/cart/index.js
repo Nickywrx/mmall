@@ -5,10 +5,10 @@
 * @Last Modified time: 2017-09-30 17:00:56
 */
 require('./index.css');
-require('page/common/nav/index.js');
+var nav = require('page/common/nav/index.js');
 require('page/common/header/index.js');
 var _mm             = require('util/mm.js');
-var _cart        	= require('service/cart-service.js');
+var _cart        	  = require('service/cart-service.js');
 var templateIndex   = require('./index.string');
 
 var page = {
@@ -122,7 +122,7 @@ var page = {
      $(document).on('click','.btn-submit', function(){
      	// 总价大于0，进行提交
      	if(_this.data.cartInfo && _this.data.cartInfo.cartTotalPrice > 0){
-     		window.location.href = './confirm.html';
+     		window.location.href = './order-confirm.html';
      	}else{
      		_mm.errorTips('请选择商品后再提交');
      	}
@@ -146,6 +146,8 @@ var page = {
    		// 生成html
    		var cartHtml = _mm.renderHtml(templateIndex, data);
    		$('.page-wrap').html(cartHtml);
+      // 通知导航的购物数量发生变化
+      nav.loadCartCount();
    },
    // 删除指定商品，支持批量，productId用逗号分隔
    deleteCartProduct : function(productIds){
