@@ -16,7 +16,7 @@ var page = {
         this.bindEvent();
     },
     onLoad : function(){
-        // 初始化左侧菜单
+       // 初始化左侧菜单
         navSide.init({
             name: 'order-list'
         });
@@ -24,7 +24,17 @@ var page = {
         this.loadDetail();
     },
     bindEvent : function(){
-
+        var _this = this;
+        $(document).on('click', '.order-cancel', function(){
+            if(window.confirm('确实要取消该订单？')){
+                _order.cancelOrder(_this.data.orderNumber, function(res){
+                _mm.errorTips('该订单取消成功');
+                    _this.loadDetail();
+                }, function(errMsg){
+                    _mm.errorTips(errMsg);
+                })
+            }
+        })
     },
     loadDetail : function(){
         var _this           = this,
@@ -32,13 +42,19 @@ var page = {
             $content        = $('.content');
         $content.html('<div class="loading"></div>');
         _order.getOrderDetail(this.data.orderNumber, function(res){
+            _this.dataFilter(res);
             orderDetailHtml = _mm.renderHtml(templateIndex, res);
             $content.html(orderDetailHtml);
         }, function(errMsg){
             $content.html('<div class="err-tip">'+ errMsg +'</div>');
         });   
+    },
+    // 数据的适配
+    dataFilter : function(data){
+        data.needPay         = data.status == 10;
+        data.isCancelable    = data.status == 10;
+
     }
-    
 };
 $(function(){
     page.init();
