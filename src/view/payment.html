@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -23,4 +24,31 @@
 	</div>
 	<%= require('html-loader!./layout/footer.html')%>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<%= require('html-loader!./layout/head-common.html')%>
+		<title><%= htmlWebpackPlugin.options.title%> - happymmall电商平台</title>
+	</head>
+<body>
+	<%= require('html-loader!./layout/nav.html')%>
+	<%= require('html-loader!./layout/header.html')%>
+	<!-- 中间内容 -->
+	<div class="crumb">
+		<div class="w">
+			<div class="crumb-con">
+				<a href="./index.html" class="link">MMall</a>
+				<span>></span>
+				<span class="link-text"><%= htmlWebpackPlugin.options.title%></span>
+			</div>
+		</div>
+	</div>
+	<!-- 中间内容 -->
+	<div class="page-wrap w">
+		
+	</div>
+	<%= require('html-loader!./layout/footer.html')%>
+</body>
+>>>>>>> cb29e85bad96e9ffb131906a37acf07011b119f1
 </html>
