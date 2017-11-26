@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 var _mm = require('util/mm.js');
 
 var _payment = {
@@ -25,7 +24,6 @@ var _payment = {
         });
     }
 }
-=======
 var _mm = require('util/mm.js');
 
 var _payment = {
@@ -52,5 +50,4 @@ var _payment = {
         });
     }
 }
->>>>>>> cb29e85bad96e9ffb131906a37acf07011b119f1
 module.exports = _payment;

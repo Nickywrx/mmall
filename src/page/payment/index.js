@@ -33,7 +33,6 @@ var page = {
 };
 $(function(){
     page.init();
-=======
 require('./index.css');
 require('page/common/nav/index.js');
 require('page/common/header/index.js');
@@ -69,5 +68,4 @@ var page = {
 };
 $(function(){
     page.init();
->>>>>>> cb29e85bad96e9ffb131906a37acf07011b119f1
 });
