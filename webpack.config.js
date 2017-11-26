@@ -3,12 +3,12 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 // 环境变量配置 dev / online
 var WEBPACK_ENV       = process.env.WEBPACK_ENV || 'dev';
-console.log(WEBPACK_ENV); 
 // 获取html-webpack-plugin参数的方法
 var getHtmlConfig=function(name, title){
     return {
           template : './src/view/'+name+'.html',
           filename : 'view/'+name+'.html',
+          favicon  : './favicon.ico',
           title    : title,
           inject   : true,
           hash     : true,
@@ -25,7 +25,8 @@ var config = {
       	'cart'               : ['./src/page/cart/index.js'],
         'order-confirm'      : ['./src/page/order-confirm/index.js'],
         'order-list'         : ['./src/page/order-list/index.js'],
-      	'order-detail'       : ['./src/page/order-detail/index.js'],
+        'order-detail'       : ['./src/page/order-detail/index.js'],
+      	'payment'            : ['./src/page/payment/index.js'],
      	  'user-login'         : ['./src/page/user-login/index.js'],
       	'user-register'      : ['./src/page/user-register/index.js'],
       	'user-pass-reset'    : ['./src/page/user-pass-reset/index.js'],
@@ -35,9 +36,9 @@ var config = {
       	'result'             : ['./src/page/result/index.js']
      },
      output : {
-         path: './dist',
-         publicPath:'/dist',
-         filename: 'js/[name].js'
+         path       : __dirname + '/dist/',
+         publicPath : 'dev' === WEBPACK_ENV ? '/dist/' : '//s.happymmall.com/mmall/dist/',
+         filename   : 'js/[name].js'
      },
      externals : {
      	'jquery':'window.jQuery'	
@@ -86,6 +87,7 @@ var config = {
           new HtmlWebpackPlugin(getHtmlConfig('order-confirm', '订单确认')),
           new HtmlWebpackPlugin(getHtmlConfig('order-list', '订单列表')),
           new HtmlWebpackPlugin(getHtmlConfig('order-detail', '订单详情')),
+          new HtmlWebpackPlugin(getHtmlConfig('payment', '订单支付')),
           new HtmlWebpackPlugin(getHtmlConfig('user-login', '用户登录')),
           new HtmlWebpackPlugin(getHtmlConfig('user-register', '用户注册')),
           new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset', '找回密码')),
