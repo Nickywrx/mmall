@@ -63,7 +63,7 @@
  .total .total-price{
  	font-weight: bold;
  	color: #c60023;
-=======
+
 /* 商品清单 */
 .order-info .text-line{
 	height: 30px;
@@ -128,5 +128,4 @@
  .total .total-price{
  	font-weight: bold;
  	color: #c60023;
->>>>>>> cb29e85bad96e9ffb131906a37acf07011b119f1
  }
