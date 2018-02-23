@@ -56,7 +56,11 @@ var config = {
                },
                 {
                     test : /\.string$/, 
-                    loader :  'html-loader'
+                    loader :  'html-loader',
+                    query:{
+                      minimize : true,
+                      removeAttributeQuotes : false
+                    }
 
                }
      	]
