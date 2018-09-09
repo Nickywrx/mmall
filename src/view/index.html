@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="zh-cmn-Hans">
 	<head>
-		<meta http-equiv="x-ua-compatible" content="ie=edge; charset=utf-8">
+		<!-- <meta http-equiv="x-ua-compatible" content="ie=edge; charset=utf-8">
 <meta name="keywords" content="wrx,电商">
 <meta name="description" content="wrx,专属电商">
 <link rel="dns-prefectch" href="//cdn.bootcss.com">
 <link rel="dns-prefectch" href="//s.happymmall.com">
-<link rel="dns-prefectch" href="//img.happymmall.com">
-	<!-- <%= require('html-loader!./layout/head-common.html')%>
-		<title><%= htmlWebpackPlugin.options.title%> - happymmall电商平台</title> -->
+<link rel="dns-prefectch" href="//img.happymmall.com"> -->
+	<%= require('html-loader!./layout/head-common.html')%>
+		<title><%= htmlWebpackPlugin.options.title%> - happymmall电商平台</title>
 	</head>
 <body>
 	<!-- <%= require('html-loader!./layout/nav.html')%>
 	<%= require('html-loader!./layout/header.html')%> -->
 	<!-- 中间内容 -->
-	<!-- <div class="w">
+	<div class="w">
 		<ul class="keywords-list">
 			<li class="keywords-item">
 				<a class="link" target="_blank" href="./list.html?keyword=手机">手机</a>
@@ -246,19 +246,19 @@
 				</li>
 			</ul>
 		</div>
-	</div> -->
+	</div>
 	<div class="w">
 		<h1>This is a personal testing website! welcome here</h1>
 	</div>
-	<div>
+	<!-- <div>
 		<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1536505599370&di=ecb7567a7702b387c4387a512720c4b2&imgtype=0&src=http%3A%2F%2Fimg.name2012.com%2Fuploads%2Fallimg%2F2016-10%2F19-000251_271.jpg">
 
 		这是我个人测试网站 ,用来记录个人技术分享 
 	</div>
 	<p class="copyright" style="text-align: center;">
 			粤ICP备17148013号
-		</p>
-	<!-- <%= require('html-loader!./layout/footer.html')%> -->
+		</p> -->
+	<%= require('html-loader!./layout/footer.html')%>
 
 </body>
 </html>
